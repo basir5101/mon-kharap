@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  মন খারাপ </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container text-center">
+        <div class="mon-kharap">
+            <h3>আপনার কি মন খারাপ ? </h3>
+            <button id="mon-kharap-yes" class="btn btn-success">হ্যাঁ</button>
+            <button id="mon-kharap-no" class="btn btn-danger">না</button>
+            <h5 id="mon-valo">তাহলে নিজের গালে নিজে চর মারেন।</h5>
+        </div>
+        <div class="prem-koren">
+            <h3>আপনি কি প্রেম করেন ? </h3>
+            <button id="prem-yes" class="btn btn-success">হ্যাঁ</button>
+            <button id='prem-no' class="btn btn-danger">না</button>
+            <ul id="single" class="list-group">
+                <li class="list-group-item">খোলা আকাশের দিকে তাকিয়ে বুক ভরে নিঃশ্বাষ নিন</li>
+                <li class="list-group-item">আপনি সুস্থ এটাই মন ভালোর জন্য যথেস্ট</li>
+                <li class="list-group-item">আয়নার সামনে গিয়ে নিজের দিকে তাকিয়ে হাসুন তো</li>
+                <li class="list-group-item">মন খারাপ করামানে আপনার সোনালী সময় গুলোকে অবহেলা করা</li>
+            </ul>
+        </div>
+        <div class="boyfriend">
+            <h3>মন খারাপের কারণ কি বয়ফ্রেন্ড ? </h3>
+            <button id="boyfriend-yes" class="btn btn-success">হ্যাঁ</button>
+            <button id="boyfriend-no" class="btn btn-danger">না</button>
+            <h5 id="for-boyfriend">Please! drink a glass of poison.</h5>
+            <h5 id="no-boyfriend">ফ্রি তে এই পরামর্শ দেই না। টাকার দরকার হলে <a href="">এখানে ক্লিক করেন</a></h5>
+        </div>
+    </div>
+    <script>
+        // document.getElementById('mon-kharap-no').addEventListener('click', function(){
+        //     document.getElementById('mon-valo').style.visibility = 'visible';
+        // })
+        function whenNo(noId, resultId){
+            document.getElementById(noId).addEventListener('click', function(){
+                document.getElementById(resultId).style.display = 'block';
+        })
+        }
+        whenNo('mon-kharap-no', 'mon-valo')
+        whenNo('prem-no', 'single');
+        whenNo('boyfriend-no', 'no-boyfriend');
+        whenNo('boyfriend-yes', 'for-boyfriend')
+
+        
+    </script>
+</body>
+</html>
